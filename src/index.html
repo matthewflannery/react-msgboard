@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Anon Message Board</title>
+  <!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<!-- font awesome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+
+<!-- Bootstrap JS -->
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container-fluid">
+      <div class="navbar-header ">
+        <h1>Anon Message Board</h1>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="panel-group">
+      <div class="panel panel-primary">
+        <div class="panel-heading">Post a message</div>
+        <div class="panel-body">
+          <div class="form-group">
+            <label>Message:</label>
+            <textarea id="message" type="text" class="form-control"></textarea>
+          </div>
+          <button id="submit" class="btn btn-default">Post to board</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel-group">
+      <div class="panel panel-default">
+        <div class="panel-heading">Message Board</div>
+        <div class="panel-body">
+          <ul class="message-board">
+            <li data-id="${key}">
+              Hello 👋
+              <i class="fa fa-trash pull-right delete"></i>
+              <i class="fa fa-thumbs-down pull-right"></i>
+              <i class="fa fa-thumbs-up pull-right"></i>
+              <div class="pull-right">2</div>
+            </li>
+            <li data-id="${key}">
+              Why did the 🐔 cross the road? To get to the otherside!
+              <i class="fa fa-trash pull-right delete"></i>
+              <i class="fa fa-thumbs-down pull-right"></i>
+              <i class="fa fa-thumbs-up pull-right"></i>
+              <div class="pull-right">100</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <script src="./app.bundle.js"></script>
+</body>
+</html>
