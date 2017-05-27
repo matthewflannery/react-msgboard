@@ -5,14 +5,14 @@ export default class Message extends Component {
     super(props)
 
     this.state = {
-      newLikes: 0
+      newLikes: this.props.likes
     }
-    this.addLike = this.addLike.bind(this)
+    this.handleNewLike = this.handleNewLike.bind(this)
   }
 
-  addLike() {
+  handleNewLike() {
     console.log('You clicked thumbs up')
-    console.log(this.props.newLikes)
+    console.log(this.state.newLikes)
     }
 
   render() {
@@ -22,7 +22,7 @@ export default class Message extends Component {
         {this.props.children}
         <i className="fa fa-trash pull-right delete"></i>
         <i className="fa fa-thumbs-down pull-right"></i>
-        <i onClick={this.addLike} className="fa fa-thumbs-up pull-right"></i>
+        <i onClick={this.handleNewLike} className="fa fa-thumbs-up pull-right"></i>
         <div className="pull-right">{this.props.likes}</div>
       </li>
     )
