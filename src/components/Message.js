@@ -5,15 +5,15 @@ export default class Message extends Component {
     super(props)
 
     this.state = {
-      newLikes: this.props.likes
+      newLikes: 0
     }
     this.handleNewLike = this.handleNewLike.bind(this)
   }
 
-  handleNewLike() {
+  handleNewLike(upvote) {
     console.log('You clicked thumbs up')
-    console.log(this.state.newLikes)
-    }
+    this.props.onNewLike(this.state.newLikes)
+  }
 
   render() {
     //console.log('props.children: ', this.props.children)

@@ -24,6 +24,13 @@ export default class App extends Component {
     })
   }
 
+  handleLikes(likes) {
+    const like = { likes: likes}
+    this.setState({
+      messages: this.state.messages.concat(like)
+    })
+  }
+  // <Message likes={message.likes}>
   render() {
     return(
       <div>
@@ -34,7 +41,7 @@ export default class App extends Component {
           <PostMessage onNewMessage={this.handleNewMessage} />
           <MessageBoard>
             {this.state.messages.map(message => (
-              <Message likes={message.likes}>
+              <Message onNewLike={this.handleLikes}>
                 {message.text}
               </Message>
             ))}
